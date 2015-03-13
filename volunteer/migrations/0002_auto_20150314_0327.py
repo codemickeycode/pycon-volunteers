@@ -14,19 +14,19 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='committee',
             name='committee_id',
-            field=models.IntegerField(unique=True, null=True),
+            field=models.IntegerField(null=True, unique=True),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='committeechair',
             name='committee_id',
-            field=models.ForeignKey(to_field=b'committee_id', blank=True, to='volunteer.Committee', null=True),
+            field=models.ForeignKey(null=True, blank=True, to_field='committee_id', to='volunteer.Committee'),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='volunteer',
             name='committee_id',
-            field=models.ForeignKey(to_field=b'committee_id', blank=True, to='volunteer.Committee', null=True),
+            field=models.ForeignKey(null=True, blank=True, to_field='committee_id', to='volunteer.Committee'),
             preserve_default=True,
         ),
     ]
