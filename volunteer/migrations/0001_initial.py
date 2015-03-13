@@ -11,12 +11,23 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Committees',
+            name='Committee',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=200)),
                 ('slots_available', models.IntegerField()),
                 ('slots_taken', models.IntegerField()),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='CommitteeChair',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('name', models.CharField(max_length=200)),
+                ('email', models.CharField(max_length=200)),
             ],
             options={
             },
