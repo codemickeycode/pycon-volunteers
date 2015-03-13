@@ -1,2 +1,6 @@
 db.sqlite3
 *.pyc
+myvenv
+__pycache__
+staticfiles
+local_settings.py

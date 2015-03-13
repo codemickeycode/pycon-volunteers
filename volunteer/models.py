@@ -17,11 +17,11 @@ class Volunteer(models.Model):
     def __str__(self):
         return self.name
 
-class Committees(models.Model):
+class Committee(models.Model):
     name = models.CharField(max_length=200)
     slots_available = models.IntegerField()
     slots_taken = models.IntegerField()
 
-class CommitteeChairs(models.Model):
+class CommitteeChair(models.Model):
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
