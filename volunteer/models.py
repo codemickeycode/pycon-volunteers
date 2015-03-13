@@ -21,3 +21,7 @@ class Committees(models.Model):
     name = models.CharField(max_length=200)
     slots_available = models.IntegerField()
     slots_taken = models.IntegerField()
+
+class CommitteeChairs(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
