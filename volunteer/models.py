@@ -8,6 +8,9 @@ class Committee(models.Model):
     slots_available = models.IntegerField()
     slots_taken = models.IntegerField()
 
+    def __unicode__(self):
+        return u'%s %s' % (self.committee_id, self.name)
+
 class Volunteer(models.Model):
     name = models.CharField(max_length=200)
     nickname = models.CharField(max_length=200)
